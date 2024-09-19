@@ -4,14 +4,14 @@ document.getElementById("budgetForm").addEventListener("submit", function (e) {
   const initialBudget = parseFloat(
     document.getElementById("initialBudget").value
   );
-  const years = parseInt(document.getElementById("weeks").value);
+  const years = parseInt(document.getElementById("years").value);
   const inflationRate =
     parseFloat(document.getElementById("inflationRate").value) / 100;
 
   let finalBudget = initialBudget;
   let totalBudget = 0;
 
-  for (let i = 0; i < weeks; i++) {
+  for (let i = 0; i < years; i++) {
     finalBudget *= 1 + inflationRate;
     totalBudget += finalBudget;
   }
@@ -23,5 +23,5 @@ document.getElementById("budgetForm").addEventListener("submit", function (e) {
 
   document.getElementById(
     "result"
-  ).innerHTML = `Total budget after ${weeks} weeks: ${totalBudgetFormatted}`;
+  ).innerHTML = `Total budget after ${yesrs} weeks: ${totalBudgetFormatted}`;
 });
