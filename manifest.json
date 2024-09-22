@@ -1,7 +1,7 @@
 {
-   "name": "Sample PWA",
-   "short_name" : "PWA",
-   "start_url": "index.html?utm_source=homescreen",
+   "name": "V&F Calculator",
+   "short_name" : "VFC",
+   "start_url": "https://www.costbuildup.com/?utm_source=homescreen",
    "scope" : "./",
    "icons": [
        {
