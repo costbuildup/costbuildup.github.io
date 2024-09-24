@@ -1,11 +1,11 @@
 {
-    "name": "V&F Cal",
-    "short_name": "VFC",
+    "name": "V&B Cal",
+    "short_name": "VBC",
     "theme_color": "#ffcbe4",
     "background_color": "#fa99ca",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://www.costbuildup.com/fin/",
+    "start_url": "https://www.costbuildup.com/bal/",
     "description": "Calculate vacation and balance amount",
     "orientation": "any",
     "icons": [
