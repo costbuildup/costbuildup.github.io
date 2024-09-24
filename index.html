@@ -33,10 +33,13 @@
   </div>
   <script src="script.js"></script>
   <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-          navigator.serviceWorker.register('sw.js')
-        }
-    </script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/sw.js',
+          {scope: '/'}
+        )
+      }
+  </script>
  
 </body>
 
