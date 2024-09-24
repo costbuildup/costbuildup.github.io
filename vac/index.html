@@ -5,14 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vacation Budget Calculator</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel= “manifest” href="https://www.costbuildup.com/manifest.json" />
+  <link rel= “manifest” href="https://www.costbuildup.com/vac/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/Allpreelogo.png"/>
+        <link rel="icon" type="image/png" sizes="192x192" href="/img/Allpreelogo.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/Allpreelogo.png"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="/img/Allpreelogo.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/Allpreelogo.png"/>
   <link rel="stylesheet" href="https://www.costbuildup.com/styles.css">
 </head>
 
 <body>
   <div class="calculator-container">
-    <center><a href="https://www.costbuildup.com/" ><button>Refresh</button></a>   <a href="https://www.costbuildup.com/fin/" ><button>Fin Cal</button></a></center> 
+    <center><a href="https://www.costbuildup.com/vac/" ><button>Refresh</button></a>   <a href="https://www.costbuildup.com/fin/" ><button>Fin Cal</button></a></center> 
     <h1>CALCULATION</h1>
     <form id="budgetForm">
       <div class="form-group">
@@ -34,7 +38,7 @@
   <script src="script.js"></script>
    <script>
  if (!navigator.serviceWorker.controller) {
-     navigator.serviceWorker.register("https://www.costbuildup.com/sw.js").then(function(reg) {
+     navigator.serviceWorker.register("https://www.costbuildup.com/vac/sw.js").then(function(reg) {
          console.log("Service worker has been registered for scope: " + reg.scope);
      });
  }
