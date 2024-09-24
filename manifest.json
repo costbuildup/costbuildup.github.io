@@ -1,21 +1,53 @@
 {
-   "name": "V&F Calculator",
-   "short_name" : "VFC",
-   "start_url": "index.html?utm_source=homescreen",
-   "scope" : "./",
-   "icons": [
-       {
-           "src": "./android-chrome-192x192.png",
-           "sizes": "192x192",
-           "type": "image/png"
-       },
-       {
-           "src": "./android-chrome-512x512.png",
-           "sizes": "512x512",
-           "type": "image/png"
-       }
-   ],
-   "theme_color": "#ffee00",
-   "background_color": "#ffee00",
-   "display": "standalone"
+  "name": "VF Calculator",
+  "short_name": "VF Cal",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "description": "Simple Calculator To Help With Your Work.",
+  "lang": "en-US",
+  "dir": "auto",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://www.costbuildup.com/costbuildup1.ico",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://www.costbuildup.com/costbuildup.ico",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name":"Home",
+      "url":"/",
+      "description":"Takes you to main landing page of the calculator.",
+      "icons": [
+        {
+          "src": "https://www.costbuildup.com/costbuildup.ico",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name":"Fin Calculator",
+      "url":"/cal",
+      "description":"Takes you to balance calculator.",
+      "icons": [
+        {
+          "src": "https://www.costbuildup.com/costbuildup.ico",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
 }
