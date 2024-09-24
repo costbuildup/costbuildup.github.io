@@ -1,0 +1,17 @@
+{
+    "name": "Fin Cal",
+    "short_name": "FNC",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://www.costbuildup.com/fin",
+    "description": "Calculate the balance amount",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://www.costbuildup.com/img/Allpree.jpg",
+            "sizes": "512x512"
+        }
+    ]
+}
