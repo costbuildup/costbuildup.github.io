@@ -5,7 +5,7 @@
     "background_color": "#fa99ca",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://www.costbuildup.com/fin/",
+    "start_url": "https://www.costbuildup.com/vac/",
     "description": "Calculate vacation and balance amount",
     "orientation": "any",
     "icons": [
