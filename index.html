@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vacation Budget Calculator</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel= “manifest” href="manifest.json" />
-  <link rel="stylesheet" href="styles.css">
+  <link rel= “manifest” href="https://www.costbuildup.com/manifest.json" />
+  <link rel="stylesheet" href="https://www.costbuildup.com/styles.css">
 </head>
 
 <body>
@@ -32,14 +32,13 @@
     <div id="result"></div>
   </div>
   <script src="script.js"></script>
-  <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/sw.js',
-          {scope: '/'}
-        )
-      }
-  </script>
+   <script>
+ if (!navigator.serviceWorker.controller) {
+     navigator.serviceWorker.register("https://www.costbuildup.com/sw.js").then(function(reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+     });
+ }
+</script>
  
 </body>
 
