@@ -1,39 +1,52 @@
-const CACHE_NAME = 'cool-cache';
-
-// Add whichever assets you want to precache here:
-const PRECACHE_ASSETS = [
-    '/cal/',
-    '/',
-    '/styles.css',
-    '/script.js'
+var GHPATH = '/';
+var APP_PREFIX = 'vfc_';
+var VERSION = 'version_001';
+var URLS = [    
+  `${GHPATH}/`,
+  `${GHPATH}/index.html`,
+  `${GHPATH}/styles.css`,
+  `${GHPATH}/icon.png`,
+  `${GHPATH}/app.js`
 ]
 
-// Listener for the install event - precaches our assets list on service worker install.
-self.addEventListener('install', event => {
-    event.waitUntil((async () => {
-        const cache = await caches.open(CACHE_NAME);
-        cache.addAll(PRECACHE_ASSETS);
-    })());
-});
+var CACHE_NAME = APP_PREFIX + VERSION
+self.addEventListener('fetch', function (e) {
+  console.log('Fetch request : ' + e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function (request) {
+      if (request) { 
+        console.log('Responding with cache : ' + e.request.url);
+        return request
+      } else {       
+        console.log('File is not cached, fetching : ' + e.request.url);
+        return fetch(e.request)
+      }
+    })
+  )
+})
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
-});
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log('Installing cache : ' + CACHE_NAME);
+      return cache.addAll(URLS)
+    })
+  )
+})
 
-self.addEventListener('fetch', event => {
-  event.respondWith(async () => {
-      const cache = await caches.open(CACHE_NAME);
-
-      // match the request to our cache
-      const cachedResponse = await cache.match(event.request);
-
-      // check if we got a valid response
-      if (cachedResponse !== undefined) {
-          // Cache hit, return the resource
-          return cachedResponse;
-      } else {
-        // Otherwise, go to the network
-          return fetch(event.request)
-      };
-  });
-});
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
+      })
+      cacheWhitelist.push(CACHE_NAME);
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          console.log('Deleting cache : ' + keyList[i] );
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})
