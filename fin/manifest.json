@@ -5,12 +5,12 @@
     "background_color": "#fa99ca",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://www.costbuildup.com/fin",
+    "start_url": "https://www.costbuildup.com/fin/",
     "description": "Calculate the balance amount",
     "orientation": "any",
     "icons": [
         {
-            "src": "https://www.costbuildup.com/img/Allpree.jpg",
+            "src": "https://www.costbuildup.com/img/Allpree.png",
             "sizes": "512x512"
         }
     ]
