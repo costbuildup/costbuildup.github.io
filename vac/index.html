@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Budget Calculator</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel= “manifest” href="https://www.costbuildup.com/manifest.json" />
+  <link rel="stylesheet" href="https://www.costbuildup.com/styles.css">
+</head>
+
+<body>
+  <div class="calculator-container">
+    <center><a href="https://www.costbuildup.com/" ><button>Refresh</button></a>   <a href="https://www.costbuildup.com/fin/" ><button>Fin Cal</button></a></center> 
+    <h1>CALCULATION</h1>
+    <form id="budgetForm">
+      <div class="form-group">
+        <label for="initialBudget">(Room Cost) Per Week:</label>
+        <input type="number" id="initialBudget" name="initialBudget" value="" required>
+      </div>
+      <div class="form-group">
+        <label for="years">Number of weeks:</label>
+        <input type="number" id="years" name="years"  value="" required>
+      </div>
+      <div class="form-group">
+        <label for="inflationRate">Annual Inflation Rate (%):</label>
+        <input type="number" id="inflationRate" name="inflationRate" min="0" max="4" step="0.1" value="0" required>
+      </div>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+   <script>
+ if (!navigator.serviceWorker.controller) {
+     navigator.serviceWorker.register("https://www.costbuildup.com/sw.js").then(function(reg) {
+         console.log("Service worker has been registered for scope: " + reg.scope);
+     });
+ }
+</script>
+ 
+</body>
+
+</html>
