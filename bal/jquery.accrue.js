@@ -140,7 +140,7 @@
             term: ""
         },
         field_titles: {
-            amount: "Fin Amount",
+            amount: "Balance Amount",
             rate: "Rate (APR)",
             rate_compare: "Comparison Rate",
             term: "Term"
