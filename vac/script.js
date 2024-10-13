@@ -23,5 +23,5 @@ document.getElementById("budgetForm").addEventListener("submit", function (e) {
 
   document.getElementById(
     "result"
-  ).innerHTML = `Total budget after ${years} weeks: ${totalBudgetFormatted}`;
+  ).innerHTML = `Total budget after ${years} years: ${totalBudgetFormatted}`;
 });
