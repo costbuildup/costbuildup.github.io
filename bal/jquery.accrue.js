@@ -155,8 +155,8 @@
         response_output_div: ".results",
         response_basic: 
             '<p><strong>Monthly Payment:</strong><br />%payment_amount%</p>'+
-            '<p><strong>Number of Payments:</strong><br />%num_payments%</p>'+
-            '<p><strong>Total Payments:</strong><br />%total_payments%</p>',
+            '<p><strong>Number of Payments:</strong><br />%num_payments%</p>',
+            
         response_compare: '<p class="total-savings">Save %savings% in interest!</p>',
         error_text: '<p class="error">Please fill in all fields above.</p>',
         callback: function ( elem, data ){}
